@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Flag Project</title>
+    <style>
+      .star {
+        width: 360px;
+        aspect-ratio: 1;
+        background: #f8ca00;
+        clip-path: polygon(
+          50% 0,
+          calc(50% * (1 + sin(0.4turn))) calc(50% * (1 - cos(0.4turn))),
+          calc(50% * (1 - sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+          calc(50% * (1 + sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+          calc(50% * (1 - sin(0.4turn))) calc(50% * (1 - cos(0.4turn)))
+        );
+      }
+      /* Write your CSS Code here */
+      .flag{
+        width: 900px;
+        height: 600px;
+        background-color: #EF1A25;
+        position: relative;
+        font-size: 70px;
+        text-align: center;
+        color: white;
+      }
+      .flag > p{
+        width: 100%;
+        top: 10px;
+        margin: 0 auto;
+      }
+      .flag > div > .star{
+          width: 380px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+        
+    </style>
+  </head>
+
+  <!-- 
+  IMPORTANT! Do not change any HTML
+Don't add any classes/ids/elements 
+Use what you know about combining selectors 
+and CSS specificity instead.
+Hint 1: The flag is 900px by 600px and the Star is width 380px.
+Hint 2: You can use CSS inspection to get the colors from
+-->
+  <body>
+    <div class="flag">
+      <p>Việt Nam Quết thắng</p>
+      <div>
+        <div class="star"></div>
+      </div>
+    </div>
+  </body>
+</html>
